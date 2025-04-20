@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 🎨 Color Variables */
+:root {
+    --bg: #F5F5F5;               /* Soft Light Grey */
+    --sidebar: #FFFFFF;           /* Clean White */
+    --sidebar-hover: #0056b3;     /* Deep Blue for hover */
+    --text: #333333;              /* Dark Charcoal */
+    --accent: #FF6F61;            /* Warm Coral for highlights */
+    --highlight: #0056b3;         /* Deep Blue for active links */
+    --navbar: #007BFF;            /* Vibrant Blue for navbar */
+    --card: #FFFFFF;              /* White Cards */
+    --border-color: #E0E0E0;      /* Light Grey Borders */
+    --transition-speed: 0.3s;
+}
+
+/* 🌐 Main Layout */
+.main-app {
+    display: flex;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* 🧱 Sidebar Styling */
+.sidebar-container {
+    background: var(--sidebar);
+    color: var(--text);
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    transition: transform var(--transition-speed) ease-in-out;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-container.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar-container.open {
+    transform: translateX(0);
+}
+
+/* 🛠️ Sidebar Header (Logo Section) */
+.sideHeader {
+    text-align: center;
+    background: var(--highlight); 
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    height: 63px;
+  }
+  
+  .sideHeader .brand-sec {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 26px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    z-index: 9999;
+    text-align: center; /* Ensure text is centered */
+    padding-left: 10px; 
+    padding-top: 8px; 
+  }
+
+  
+
+  .sideHeader .logo-img {
+    width: 70px; /* Adjust the size of the logo */
+    height: 50px; 
+    padding-right: 10px;
+  }
+  
+  /* Add color to the brand-link text for visibility */
+  .brand-link {
+    color: var(--bg); /* Dark color for contrast */
+    text-decoration: none;
+    z-index: 9999; /* Ensure it appears above other elements */
+    font-size: 26px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* 🔗 Sidebar Navigation */
+.sidebar-nav {
+    margin: 20px 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin: 10px 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    padding: 14px 20px;
+    transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    border-radius: 8px;
+    opacity: 0.85;
+}
+
+.nav-links i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.nav-links:hover {
+    background-color: #414452f8; /* Darker shade for hover */
+    color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.nav-links:active {
+    background-color: #2F334A; /* Even darker shade for active state */
+    color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    opacity: 1; /* Ensure opacity is restored */
+}
+
+.nav-links:focus,
+.nav-links:active {
+    outline: none;
+    box-shadow: 0 0 0 2px #7C3AED; /* Focus effect with a purple outline */
+}
+
+/* 🔥 Navbar Styling */
+.nav-container {
+    height: 65px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: var(--navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navbar Left Section */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left i {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    margin-right: 20px;
+}
+
+.nav-left i:hover {
+    color: var(--highlight);
+    transform: scale(1.1);
+}
+
+.navLeft-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.navLeft-link:hover {
+    color: var(--highlight);
+}
+
+/* 🚪 Logout Button */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout {
+    background: #4A4E69; /* Muted Purple to match the navbar theme */
+    color: #ffffff;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logout:hover {
+    background: #6A6F8C;   /* Lighter version of accent */
+    transform: scale(1.05);
+}
+
+/* 📊 Dashboard Styling */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 260px);
+    position: fixed;
+    top: 0;
+    left: 260px;
+    transition: all var(--transition-speed);
+    background: var(--bg);
+    color: var(--text);
+    z-index: 1;
+}
+
+.dashboard-container.full {
+    left: 0;
+    width: 100%;
+}
+
+.dash-content {
+    height: calc(100vh - 65px);
+    overflow-y: auto;
+    padding: 35px;
+    background: var(--bg);
+}
+
+/* 🛋️ Content Card Styling */
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 💠 Divider Styling */
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 20px 0;
+}
+
+/* 🔥 Scrollbar Styling */
+.sidebar-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+    background: var(--sidebar-hover);
+    border-radius: 10px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .sidebar-container {
+        width: 220px;
+    }
+
+    .dashboard-container {
+        width: calc(100% - 220px);
+    }
+
+    .sidebar-container.closed {
+        transform: translateX(-100%);
+    }
+
+    .dashboard-container.full {
+        width: 100%;
+    }
+}

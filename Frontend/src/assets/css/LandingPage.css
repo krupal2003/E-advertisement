@@ -1,0 +1,282 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Modern font for better readability */
+}
+
+body {
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container2 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;  
+}
+
+/* Header */
+.header1 {
+  background: #2563eb;
+  color: white;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav .btn {
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background: #10b981;
+  color: white;
+}
+
+.login-btn:hover {
+  background: #059669;
+}
+
+.signup-btn {
+  background: #fbbf24;
+  color: #333;
+}
+
+.signup-btn:hover {
+  background: #f59e0b;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.get-started-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  background: #14b8a6;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background: #0d9488;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  text-align: left;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #f3f4f6;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #4b5563;
+}
+
+.testimonial-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Call-to-Action Section */
+.cta {
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  background: #fbbf24;
+  color: #333;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #f59e0b;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px 10%;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 5%;
+  }
+
+  .features-container,
+  .testimonials-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature-card,
+  .testimonial-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 16px;
+  }
+}

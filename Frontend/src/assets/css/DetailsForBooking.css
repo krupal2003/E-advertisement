@@ -1,0 +1,191 @@
+/* BusinessDetailsForm.css - Enhanced Typography Version */
+
+/* Base Styles with Improved Font Weights */
+.business-details-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #1a202c; /* Darker text for better contrast */
+  }
+  
+  /* Improved Typography Hierarchy */
+  .form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .form-header h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    font-weight: 700; /* Bolder heading */
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.025em;
+  }
+  
+  .subtitle {
+    color: #4a5568; /* Slightly darker for better readability */
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 1.5;
+  }
+  
+  /* Enhanced Form Elements */
+  .business-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .form-group label {
+    font-weight: 600; /* Bolder labels */
+    color: #2d3748;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 0.85rem 1.15rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500; /* Medium weight for input text */
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+    color: #1a202c; /* Darker input text */
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    background-color: #fff;
+  }
+  
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.2em;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+  
+  /* Improved Indicators */
+  .required {
+    color: #e53e3e;
+    font-weight: 700;
+  }
+  
+  .optional {
+    color: #718096;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+  
+  .hint {
+    color: #718096;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+  
+  /* Enhanced Error States */
+  .error .form-input,
+  .error .form-select,
+  .error .form-textarea {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+  
+  /* Premium Submit Button */
+  .form-actions {
+    margin-top: 2rem;
+  }
+  
+  .submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(66, 153, 225, 0.2);
+  }
+  
+  .submit-button:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(66, 153, 225, 0.3);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+  }
+  
+  .submit-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .submit-button:hover svg {
+    transform: translateX(3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .business-details-container {
+      padding: 1.75rem;
+      margin: 1.25rem;
+    }
+    
+    .form-header h2 {
+      font-size: 1.6rem;
+    }
+    
+    .business-details-form {
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Font Face for Inter (optional) */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

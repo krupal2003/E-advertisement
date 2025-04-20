@@ -1,0 +1,109 @@
+/* Main container styles */
+.MyBooking-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.MyBooking-header {
+    color: #1976d2;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Data grid container */
+.MyBooking-dataGrid-container {
+    height: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Loading and error states */
+.MyBooking-loading-container,
+.MyBooking-error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.MyBooking-error-container {
+    color: #d32f2f;
+}
+
+/* No bookings state */
+.MyBooking-noBookings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.MyBooking-noBookings-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.MyBooking-noBookings-card h1 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.MyBooking-noBookings-card p {
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.MyBooking-refresh-button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.MyBooking-refresh-button:hover {
+    background-color: #1565c0;
+}
+
+/* Status classes */
+.MyBooking-status-confirmed {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.MyBooking-status-pending {
+    color: #ed6c02;
+    font-weight: bold;
+}
+
+.MyBooking-status-cancelled {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .MyBooking-container {
+        padding: 1rem;
+    }
+    
+    .MyBooking-dataGrid-container {
+        height: 500px;
+    }
+}

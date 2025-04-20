@@ -1,0 +1,131 @@
+/* ScreenPage.css */
+
+/* Base Styles */
+.screen-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .screen-heading {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  /* Screen Cards Grid */
+  .screen-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  /* Individual Screen Card */
+  .screen-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .screen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Screen Image */
+  .screen-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .screen-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .screen-card:hover .screen-img img {
+    transform: scale(1.05);
+  }
+  
+  /* Screen Info */
+  .screen-info {
+    padding: 1.5rem;
+  }
+  
+  .screen-info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #34495e;
+  }
+  
+  .value {
+    color: #7f8c8d;
+  }
+  
+  /* Status Styles */
+  /* .status-yes {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  .status-no {
+    color: #e74c3c;
+    font-weight: 600;
+  } */
+  
+  /* Action Button */
+  .screen-action {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .Book-button{
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Book-button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .screen-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .screen-heading {
+      font-size: 1.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .screen-page {
+      padding: 1rem;
+    }
+    
+    .screen-info {
+      padding: 1rem;
+    }
+  }
