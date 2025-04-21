@@ -7,5 +7,6 @@ routes.get('/userscreens/:userId', hordingController.getAllHordingsOfUser);
 routes.put('/updatehoarding/:id',hordingController.updateHoardingsOfUser);
 routes.get('/hoardingById/:id', hordingController.getHordingById);
 routes.get('/gethordingbyarea/:areaId', hordingController.getAllHordingsByArea);
+routes.delete('/deletehording/:id', hordingController.deleteHordingbyId);
 
 module.exports = routes;

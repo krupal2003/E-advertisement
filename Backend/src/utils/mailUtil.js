@@ -5,15 +5,15 @@ const sendingMail = async (to, subject, text) => {
         const transporter = mailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'us210170116070@gmail.com',
-                pass: 'xaqp plkg ofwz bhfe'  // Use the actual App Password
+                user: 'krupalpatel.182003@gmail.com',
+                pass: 'zdhe zief hoor peox'  // Use the actual App Password
             },
             port: 587,         // Added SMTP port
             secure: false      // TLS requires `false` for Gmail
         });
 
         const mailOption = {
-            from: '"Uday Manhas"<us210170116070@gmail.com>',
+            from: '"Uday Manhas"<krupalpatel.182003@gmail.com>',
             to: to,
             subject: subject,
             text: text

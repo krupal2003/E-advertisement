@@ -169,6 +169,19 @@ const getAllHordingsByArea = async (req, res) => {
 };
 
 
+const deleteHordingbyId=async(req,res)=>{ 
+  const deletedHording=await hordingModel.findByIdAndDelete(req.params.id)
+  if(!deletedHording){
+    return res.status(404).json({message:"Hording not found"})
+  }
+  else{
+    res.status(200).json({
+      message:"Hording deleted successfully",
+      data:deletedHording
+    })
+  }
+}
 
 
-module.exports = { addHording, getAllHordings, addHordingWithFile,getAllHordingsOfUser ,updateHoardingsOfUser, getHordingById, getAllHordingsByArea };
+
+module.exports = { addHording, getAllHordings, addHordingWithFile,getAllHordingsOfUser ,updateHoardingsOfUser, getHordingById, getAllHordingsByArea ,deleteHordingbyId};

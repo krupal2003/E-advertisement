@@ -10,7 +10,7 @@ export const AgencyHome = () => {
         <div className="hero-content">
           <h1>Welcome to Your Advertising Dashboard</h1>
           <p className="welcome-message">
-            Hello, <span className="user-name">Uday</span>! Manage your advertising screens and maximize your earnings
+            Hello, <span className="user-name">Krupal</span>! Manage your advertising screens and maximize your earnings
           </p>
         </div>
       </section>
